@@ -229,7 +229,7 @@ common test-common
   extra-libraries: stdc++
   ghc-options: -threaded
   hs-source-dirs: tests, tests/github
-  other-modules: SpecRunner, HsStructTestTypes
+  other-modules: SpecRunner
   build-depends: base,
                  aeson,
                  async,
@@ -405,6 +405,7 @@ test-suite hs-struct
   import: fb-haskell, fb-cpp, test-common
   type: exitcode-stdio-1.0
   main-is: HsStructTest.hs
+  other-modules: HsStructTestTypes
   cxx-sources: tests/HsStructHelper.cpp
   ghc-options: -main-is HsStructTest
 
